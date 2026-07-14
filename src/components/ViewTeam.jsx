@@ -10,11 +10,11 @@ const ViewTeam = () => {
     setLoading(true);
 
     axios
-      .get("https://example.com/api/view-teams")
+      .get("http://localhost:3000/api/view-teams")
       .then((response) => {
-        changeData(response.data);
-        setLoading(false);
-      })
+  changeData(response.data.data);
+  setLoading(false);
+})
       .catch((error) => {
         console.log(error);
         setLoading(false);

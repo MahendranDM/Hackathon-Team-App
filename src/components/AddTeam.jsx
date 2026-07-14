@@ -30,7 +30,7 @@ const AddTeam = () => {
     console.log(input);
 
     axios
-      .post("https://example.com/api/add-team", input)
+      .post("http://localhost:3000/api/add-team", input)
       .then((response) => {
         console.log(response.data);
         alert("Team Added Successfully");
@@ -57,7 +57,6 @@ const AddTeam = () => {
 
             <div className="row g-3">
 
-              {/* Team ID */}
               <div className="col-md-4">
                 <label className="form-label">Team ID</label>
                 <input
@@ -69,7 +68,7 @@ const AddTeam = () => {
                 />
               </div>
 
-              {/* Team Name */}
+          
               <div className="col-md-4">
                 <label className="form-label">Team Name</label>
                 <input
@@ -81,7 +80,7 @@ const AddTeam = () => {
                 />
               </div>
 
-              {/* Team Leader */}
+            
               <div className="col-md-4">
                 <label className="form-label">Team Leader Name</label>
                 <input
